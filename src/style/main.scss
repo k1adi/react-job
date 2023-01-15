@@ -1,0 +1,18 @@
+@import 
+  'abstracts/variables';
+
+@import 
+  'base/general',
+  'base/app';
+
+@import
+  'components/button',
+  'components/card';
+
+@import
+  'layout/navbar',
+  'layout/footer';
+
+@import 
+  'pages/detail',
+  'pages/not-found';

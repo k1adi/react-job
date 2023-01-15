@@ -1,0 +1,12 @@
+#appError{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+  height: calc(100vh - 66px - 73px);
+
+  & h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}

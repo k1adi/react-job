@@ -1,0 +1,13 @@
+.footer{
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: $dark;
+  color: white;
+
+  & p{
+    font-size: 1.15rem;
+  }
+}

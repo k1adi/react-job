@@ -1,0 +1,142 @@
+.Card{
+  &--filter{
+    position: relative;
+    display: grid;
+    align-items: end;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 2rem;
+
+    .Filter{
+      &--title{
+        grid-column: 1 / 3;
+      }
+
+      &--location{
+        grid-column: 3 / 5;
+      }
+
+      &--button{
+        & > button{
+          display: block;
+          width: 100%;
+          font-size: inherit;
+          font-family: inherit;
+          padding: .5rem 0;
+          border: solid 2px $primary;
+          background-color: $primary;
+          border-radius: .3rem;
+          color: white;
+          font-weight: 600;
+          cursor: pointer;
+          outline: none;
+
+          &:hover{
+            border: solid 2px darken($color: $primary, $amount: 10%);
+            background-color: darken($color: $primary, $amount: 10%);
+          }
+        }
+      }
+
+      &__label{
+        font-weight: 600;
+        display: block;
+        margin-bottom: .25rem;
+      }
+
+      &__input{
+        font-size: inherit;
+        font-family: inherit;
+        display: block;
+        width: 100%;
+        padding: .5rem;
+        border: solid 2px $light-muted;
+        border-radius: .3rem;
+        outline: none;
+
+        &:focus,
+        &:not(:placeholder-shown){
+          border: solid 2px $primary;
+        }
+      }
+    }
+  }
+
+  &--lists{
+    display: block;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .4rem;
+    background-color: white;
+    border: solid 1px $light-muted;
+    transition: .25s;
+
+    &:hover{
+      background-color: $primary;
+      color: white;
+      box-shadow: 0px 0px 10px 0px rgba(30, 144, 255, 0.25);
+
+      .Card__desc{
+        & span{
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--detail{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    padding: 2rem;
+
+    &__head{
+      padding-bottom: 1rem;
+      border-bottom: solid 2px $light-muted;
+    }
+
+    &__content{
+      padding-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__desc{
+      grid-column: 1 / 3;
+    }
+
+    &__info{
+      grid-column: 3 / 5;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__apply{
+      margin-top: 1rem;
+      display: block;
+      position: relative;
+      padding: .75rem;
+      border-radius: .5rem;
+      background-color: $light-muted;
+      
+      h4{
+        padding-bottom: .5rem;
+        border-bottom: solid 2px white;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+}

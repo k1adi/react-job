@@ -1,0 +1,38 @@
+*, 
+::after,
+::before{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  margin: 0;
+}
+
+.text{
+  &-link{
+    color: $primary;
+    text-decoration: underline;
+  }
+
+  &-green{
+    font-weight: 700;
+    color: rgb(3, 145, 3);
+  }
+
+  &-muted{
+    color: $light-muted;
+  }
+}
